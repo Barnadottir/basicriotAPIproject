@@ -4,10 +4,10 @@ const resolvePromise = (promiseToResolve,promiseState) => {
     promiseState.error = null;
 
     const saveData = (result) => {
-        console.log("these are the results",result);
+        //console.log("these are the results",result);
         if (promiseState.promise !== promiseToResolve) return;
         promiseState.data = result
-        console.log("data:",promiseState.data);
+        //console.log("data:",promiseState.data);
     }
     
     const saveError = (error) => {

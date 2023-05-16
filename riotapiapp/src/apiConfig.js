@@ -1,4 +1,4 @@
 const BASE_URL = "https://euw1.api.riotgames.com";
-const API_KEY = "RGAPI-e63147a1-0469-4e06-b4d9-6e96440d5dcd";
+const API_KEY = "RGAPI-ac470e3d-0c26-4d9e-a021-8c1c7ac6ab8f";
 
 export {BASE_URL,API_KEY}

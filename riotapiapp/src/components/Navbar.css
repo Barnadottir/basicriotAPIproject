@@ -1,0 +1,53 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: lightblue;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container {
+    padding-top: 50px;  /* Adjust this value according to the height of your Navbar */
+}
+
+.searchbar {
+    background-color: #add8e6;
+    padding: 10px;
+    /* other styles as needed */
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    /* other styles as needed */
+}
+
+.search-input {
+    flex: 1;
+    margin-right: 10px;
+    /* other styles as needed */
+}
+
+.search-submit {
+    background-color: #b8860b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    /* other styles as needed */
+}
+
+.search-results {
+    background-color: white;
+    color: #b8860b;
+    /* other styles as needed */
+}
+
+
+

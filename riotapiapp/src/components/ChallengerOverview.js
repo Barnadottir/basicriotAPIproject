@@ -22,11 +22,11 @@ const ChallengerOverview = (props) => {
         updateOnPromise(props.model.searchResultsPromiseState.promise,reRenderACB);
     }
 
-    promiseState.data ? console.log(promiseState.data.entries[0],"THIS IS WHAT WE WANT"):console.log("FUCK");
+    //promiseState.data ? console.log(promiseState.data.entries[0],"THIS IS WHAT WE WANT"):console.log("FUCK");
 
     return (
         <div className="container">
-            <table className="table">
+            <table className="challenger-table">
                 <thead>
                     <tr className="table-header">
                         <th>Summoner Name</th>
@@ -35,7 +35,7 @@ const ChallengerOverview = (props) => {
                 </thead>
                 <tbody>
                     {promiseState.data ? promiseState.data.entries.map((player, index) => (
-                        <tr key={index}>
+                        <tr key={index} className="table-row">
                             <td>{player.summonerName}</td>
                             <td>{player.leaguePoints}</td>
                         </tr>
@@ -43,7 +43,8 @@ const ChallengerOverview = (props) => {
                 </tbody>
             </table>
         </div>
-        );
+    );
+    
     }
 
 export default ChallengerOverview;

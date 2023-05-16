@@ -11,7 +11,7 @@ const treatHTTPResponse = (response) => {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
         }
-        console.log("LOOK AT WHAT WE RETURN: ",response);
+        //console.log("LOOK AT WHAT WE RETURN: ",response);
         return response.json();
 }
 
@@ -30,6 +30,19 @@ const getSummonerByName = (name) => {
     .catch(error => console.log(error))
 }
 
-export {getChallengerPlayers,getSummonerByName}
+const getMatchData = (id) => {
+    ///ids
+    return fetch(BASE_URL + "/lol/match/v5/matches/by-puuid/" +id+"?api_key=" + API_KEY)
+    .then(treatHTTPResponse)
+    .catch(error => console.log(error))
+}
+
+const getActiveGameBySummonerId = (encryptedSummonerId) => {
+    return fetch(BASE_URL + "/lol/spectator/v4/active-games/by-summoner/" + encryptedSummonerId + "?api_key=" + API_KEY)
+    .then(treatHTTPResponse)
+    .catch(error => console.log(error))
+}
+
+export {getChallengerPlayers,getSummonerByName,getMatchData,getActiveGameBySummonerId}
 
 
